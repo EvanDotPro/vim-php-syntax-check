@@ -1,0 +1,6 @@
+This is a simple plugin that enables automatic PHP syntax checking when a file
+is saved. When a error is detected, Vim will jump to the line with the error,
+and underline that line with a curly red underline.
+
+Known bug(s): Sometimes the red curly underline does not go away automatically.
+If this happens, simply run `:match`.
