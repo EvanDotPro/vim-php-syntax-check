@@ -38,7 +38,6 @@ function HighlightBadPhp(...)
         execute 'match'
     endif
 endfunction
-au QuickFixCmdPost make call HighlightBadPhp()
 function FindNextNonBlankLine(startLine, direction)
     let matchLine=a:startLine
     if a:direction == 'up'
@@ -71,6 +70,8 @@ function! PHPsynCHK()
         silent execute "wincmd J"
         silent execute winnum . "wincmd w"
         call HighlightBadPhp(qflist)
+    else
+        execute 'match'
     endif
 endfunction
 noremap <leader>l :execute 'call PHPsynCHK()'<CR>
