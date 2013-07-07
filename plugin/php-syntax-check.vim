@@ -62,7 +62,7 @@ function! PHPsynCHK()
     let winnum = winnr() " get current window number
     let tmpfile = tempname()
     " good luck if you have Windows
-    silent execute "!php -l ".shellescape(bufname("%"))." | grep 'Parse error' > ".tmpfile
+    silent execute "!php -l ".shellescape(bufname("%"))." 2>&1 | grep 'Parse error' > ".tmpfile
     silent execute "cg ".tmpfile
     let qflist=getqflist()
     if 0 < len(qflist)
