@@ -4,3 +4,5 @@ and underline that line with a curly red underline.
 
 Known bug(s): Sometimes the red curly underline does not go away automatically.
 If this happens, simply run `:match`.
+
+You may also want to check out Syntastic: https://github.com/scrooloose/syntastic
